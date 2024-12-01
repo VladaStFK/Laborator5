@@ -32,7 +32,7 @@ Framework
 
 `                                `Realizat : Stoian Vladimira
 
-`                              `Grupa: IA2201
+`                                `Grupa: IA2201
 
 `                                `Verificat: Nichita Nartea
 
@@ -65,33 +65,35 @@ Puteți continua munca anterioară sau începe un proiect nou.
 
    ![](Aspose.Words.ecca5120-006d-44a1-8910-fcd1807039f8.002.png)
 
-1. Asigurați-vă că variabilele de mediu din fișierul .env sunt configurate corect, inclusiv conexiunea la baza de date.
+2. Asigurați-vă că variabilele de mediu din fișierul .env sunt configurate corect, inclusiv conexiunea la baza de date.
 
    Datele din .env:
+   
    ![](Aspose.Words.ecca5120-006d-44a1-8910-fcd1807039f8.003.png)
 
 
 **Nr. 2. Autentificarea utilizatorilor**
 
 1. Creați un controller AuthController pentru gestionarea autentificării utilizatorilor.
-1. Adăugați și implementați metodele pentru înregistrarea, autentificarea și deconectarea utilizatorului:
-   1. register() pentru afișarea formularului de înregistrare.
-   1. storeRegister() pentru procesarea datelor din formularul de înregistrare.
-   1. login() pentru afișarea formularului de autentificare.
-   1. storeLogin() pentru procesarea datelor din formularul de autentificare.
-1. Creați rute pentru înregistrarea, autentificarea și deconectarea utilizatorului.
-1. Actualizați vizualizările pentru formularele de înregistrare și autentificare.
-1. Creați o clasă separată Request pentru validarea datelor de înregistrare sau autentificare sau adăugați validarea direct în controller.
-1. Verificați dacă înregistrarea și autentificarea utilizatorului funcționează corect.
+2. Adăugați și implementați metodele pentru înregistrarea, autentificarea și deconectarea utilizatorului:
+   . register() pentru afișarea formularului de înregistrare.
+   . storeRegister() pentru procesarea datelor din formularul de înregistrare.
+   . login() pentru afișarea formularului de autentificare.
+   . storeLogin() pentru procesarea datelor din formularul de autentificare.
+3. Creați rute pentru înregistrarea, autentificarea și deconectarea utilizatorului.
+4. Actualizați vizualizările pentru formularele de înregistrare și autentificare.
+5. Creați o clasă separată Request pentru validarea datelor de înregistrare sau autentificare sau adăugați validarea direct în controller.
+6. Verificați dacă înregistrarea și autentificarea utilizatorului funcționează corect.
 
    Screen pentru subpunctele de mai sus:
+   
    ![](Aspose.Words.ecca5120-006d-44a1-8910-fcd1807039f8.004.png)
 
    ![](Aspose.Words.ecca5120-006d-44a1-8910-fcd1807039f8.005.png)
 
    ![](Aspose.Words.ecca5120-006d-44a1-8910-fcd1807039f8.006.png)
 
-`	`**Crearea rutelor** in web.php:
+**Crearea rutelor** in web.php:
 
 ![](Aspose.Words.ecca5120-006d-44a1-8910-fcd1807039f8.007.png)
 
@@ -109,21 +111,21 @@ Note
 Acest pas este opțional și poate fi realizat după partea principală a lucrării.
 
 1. Instalați biblioteca **Laravel Breeze** (sau Fortify, Jetstream) pentru o configurare rapidă a autentificării:
-1. php artisan breeze:install
-1. npm install && npm run dev
+2. php artisan breeze:install
+3. npm install && npm run dev
 
 php artisan migrate
 
-1. Urmați instrucțiunile de instalare și configurare a pachetului.
-1. Verificați dacă rutele /register, /login, /logout funcționează corect.
+4. Urmați instrucțiunile de instalare și configurare a pachetului.
+5. Verificați dacă rutele /register, /login, /logout funcționează corect.
 
 ![](Aspose.Words.ecca5120-006d-44a1-8910-fcd1807039f8.008.png)
 
 **Nr. 4. Autorizarea utilizatorilor**
 
 1. Implementați o pagină „Panou personal”, accesibilă doar utilizatorilor autentificați.
-1. Configurați verificarea accesului la această pagină, adăugând middleware-ul auth în rută sau implementând verificarea în controller.
-1. Actualizați vizualizarea paginii „Panou personal” pentru a afișa informațiile disponibile exclusiv utilizatorilor autentificați.
+2. Configurați verificarea accesului la această pagină, adăugând middleware-ul auth în rută sau implementând verificarea în controller.
+3. Actualizați vizualizarea paginii „Panou personal” pentru a afișa informațiile disponibile exclusiv utilizatorilor autentificați.
 
 ![](Aspose.Words.ecca5120-006d-44a1-8910-fcd1807039f8.009.png)
 
@@ -136,14 +138,15 @@ Aici urmeaza stilizarea paginei dupa:
 **Nr. 5. Rolurile utilizatorilor**
 
 1. Adăugați un sistem de roluri: **Administrator** și **Utilizator**.
-1. Configurați comportamentul pentru fiecare rol:
-   1. **Administrator**: are posibilitatea de a vizualiza panourile personale ale tuturor utilizatorilor.
-   1. **Utilizator**: poate vizualiza doar propriul panou personal.
-1. Implementați verificările rolurilor folosind metoda can, Gate sau middleware, pentru a asigura distribuirea corectă a drepturilor de acces.
+2. Configurați comportamentul pentru fiecare rol:
+   . **Administrator**: are posibilitatea de a vizualiza panourile personale ale tuturor utilizatorilor.
+   . **Utilizator**: poate vizualiza doar propriul panou personal.
+3. Implementați verificările rolurilor folosind metoda can, Gate sau middleware, pentru a asigura distribuirea corectă a drepturilor de acces.
 
 ![](Aspose.Words.ecca5120-006d-44a1-8910-fcd1807039f8.012.png)
 
 In fisierul de migrare adaugam:
+
 ![](Aspose.Words.ecca5120-006d-44a1-8910-fcd1807039f8.013.png)
 
 ![](Aspose.Words.ecca5120-006d-44a1-8910-fcd1807039f8.014.png)
@@ -155,8 +158,8 @@ In fisierul de migrare adaugam:
 **Nr. 6. Deconectarea și protecția împotriva CSRF**
 
 1. Adăugați un buton pentru deconectarea utilizatorului pe pagină.
-1. Asigurați protecția împotriva atacurilor CSRF pe formulare.
-1. Verificați că deconectarea utilizatorului funcționează corect și sigur.
+2. Asigurați protecția împotriva atacurilor CSRF pe formulare.
+3. Verificați că deconectarea utilizatorului funcționează corect și sigur.
 
 ![](Aspose.Words.ecca5120-006d-44a1-8910-fcd1807039f8.016.png)
 
